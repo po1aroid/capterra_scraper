@@ -80,7 +80,7 @@ class CapterraScraper:
         html = etree.HTML(res.text)
 
         category_link_l = html.xpath("//li[@data-alias-name]/a")
-        for link in category_link_l[:2]:
+        for link in category_link_l:
             self.create_category(category=link.text, category_url=link.attrib['href'])
 
 
